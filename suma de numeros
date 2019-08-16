@@ -1,0 +1,22 @@
+// suma de numeros.cpp : Defines the entry point for the console application.
+//autor: Sebastian de la zerda 
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+
+{
+	float suma,a,b;
+	cout<< "primer numero: "<<endl;
+	cin>>a;
+	cout<< "segundo numero: "<<endl;
+	cin>>b;
+	cout<< "suma total: "<<endl;
+	suma=a+b;
+	cout<< suma; 
+	getch();
+}
