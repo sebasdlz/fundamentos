@@ -1,0 +1,20 @@
+// area del circulo.cpp : Defines the entry point for the console application.
+//autor: Sebastian de la zerda 
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+
+{
+	float area,a,numeroreales;
+	cout<< "Radio: "<<endl;
+	cin>>a;
+	cout<< "area del circulo: "<<endl;
+	area=(a*a)*3.14156;
+	cout<< area; 
+	getch();
+}
