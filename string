@@ -1,0 +1,51 @@
+// string.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#define MAX 100
+
+using namespace std;
+
+void cargar(double a[], int tam);
+double diferencia(double a[], int tam);
+
+void main()
+{
+	double vec[MAX],dif;
+	int n;
+	do
+	{
+	   cout<<"Ingrese el numero de elementos del vector: ";
+	   cin>>n;
+	}
+	while((0>=n)||(n>MAX));
+	cargar(vec,n);
+	dif=diferencia(vec,n);
+	cout<<"Ladifernecia mas grande es: "<<dif<<endl;
+	getch();
+}
+
+
+
+
+	void cargar (double a[], int tam)
+	{
+		for(int i=0;i<tam;i++)
+		{
+			cout<<"a["<<i<<"]=";
+			cin>>a[i];
+		}
+	}
+	double diferencia (double a[],int tam)
+	{   double p=0,mayordif=0;
+	    for(int i=0;i<tam-1;i++)
+		{
+			p=a[i]-a[i+1];
+			if (abs(p)>mayordif)
+				mayordif=abs(p);
+		}
+		return mayordif;
+	}
