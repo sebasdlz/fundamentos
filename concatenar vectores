@@ -1,0 +1,62 @@
+#include "stdfax.h"
+#include "conio.h"
+#include <iostream>
+#define MAX 100
+using namesapce std;
+
+void cargar(int vec[],int n[]);
+void burbuja(int vec[],int m[]);
+void unir(int v1[],int v2[],int m, int vec[], int tam);
+void mostrar(int vec[],int tam[]);
+void main()
+{
+	int tam,n,m,A[MAX],B[MAX],C[MAX];
+	do{
+	cout<<"ingresar el tamaño del primer vector; "<<endl;
+	cin>>n;
+	}while((n<=0)||(n>MAX));
+	cargar(A,n);
+		do{
+	cout<<"ingresar el tamaño del segundo vector; "<<endl;
+	cin>>m;
+	}while((m<=0)||(m>MAX));
+	cargar(B,m);
+	unir(A,n,B,tam);
+	burbuja(C,tam);
+	mostrar(C,tam);
+	getch();
+}
+
+void cargar(int vec[],int n[])
+{
+	for (int i=0;i<n;i++)
+	{cout<<"vector["<<i<<"]=";
+	cin vec[i];
+	}
+}
+	void mostrar(int vec[],int n)
+	{
+		for (int i=0;i<n;i++)
+	cout"vector["<<i<<"]="<<vec[i]<<endl;
+	}
+
+void unir(int v1[],int v2[],int m, int vec[], int tam)
+{for(int i=0;i<n;i++)
+vec[i]=v1[i];
+for (int j=0;j<m;i++)
+	vec[i+1];
+}
+
+
+void burbuja(int vec[],int m[])
+{int aux;
+	for(int=0;i<m-1;i++)
+	{
+	for(int j=0;j<m;j++)
+	{if (vec[i]>vec[j])
+	aux=vec[j];
+	vec[j]=vec[i];
+	vec[i]=aux;
+	}
+	}
+}
