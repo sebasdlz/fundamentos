@@ -1,0 +1,47 @@
+// ejercicio 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <string>
+#define MAX 100
+using namespace std;
+
+void cargar(double vec[],int tam);
+double mostrar(double vec[],int tam);
+
+void main()
+
+{
+	double vec[MAX],dif;
+		int n,tam;
+		do{
+		cout<<"ingrese su cantidad de numeros"<<endl;
+		cin>>n;
+		}
+		while((0>=n)||(n>MAX));
+		cargar(vec,n);
+		dif=mostrar(vec,n);		
+		cout<<"su mayor diferencia es de"<<dif<<endl;
+			getch();
+}
+
+		void cargar(double vec[],int tam)
+		{
+		int aux;
+			for (int i=1;i<=n;i++)
+		{cout<<"vec["<<i<<"]=";
+		cin>>vec[i];
+		}
+
+		double mostrar(double vec[],int tam);
+		{double p=0;
+			int mayordif=0;
+		for (int i=0;i<tam-1;i++)
+		{p=vec[i]-vec[i+1];
+		if (abs(p)>mayordif)
+			mayordif=abs(p);
+		}
+		return mayordif;
+		}
