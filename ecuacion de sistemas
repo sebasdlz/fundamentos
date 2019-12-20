@@ -1,0 +1,33 @@
+// cuadratica.cpp : Defines the entry point for the console application.
+//autor: Sebastian de la zerda
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+//--------------------
+using namespace std;
+void main()
+{
+	float a,b,c,d,e,f,x,y;
+	cout<<"ingrese lo valores de la formula cuadratica ax+by=c y dx+ey=f"<<"\n";
+	cout<<"ingrese A:";
+	cin>>a;
+	cout<<"ingrese B:";
+	cin>>b;
+	cout<<"ingrese C:";
+	cin>>c;
+	cout<<"ingrese D:";
+	cin>>d;
+	cout<<"ingrese E:";
+	cin>>e;
+	cout<<"ingrese F:";
+	cin>>f;
+	x=((-b*f)+(c*e))/((-b*d)+(a*e));
+	y=((-c*d)+(f*a))/((-b*d)+(a*e));
+	cout<<"su valor de X es:";
+	cout<<x;
+	cout<<"su valor de Y es:"<<"\n";
+	cout<<y;
+	getch();
+}
