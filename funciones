@@ -1,0 +1,31 @@
+// funcion-1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+float poten (float a,int b);
+void main()
+	
+{
+	float res,uni,po;
+	cout<<"digite el numero al que le va a subir la potencia:  "<<endl;
+	cin>>uni;
+	cout<<"digite su potencia:  "<<endl;
+	cin>>po;
+	cout<<"su resultado es:  "<<poten(uni,po);
+	getch();
+}
+
+
+	float poten(float a,int b)
+	{
+	float total;
+	total=a;	
+	for (int i=1;i<b;i++)
+	{
+	total=total*a;
+	}
+	return total;
+	}
